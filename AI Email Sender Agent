@@ -1,0 +1,466 @@
+{
+  "name": "AI Email Sender Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## Email Sender Agent\n\nThis is an email sender to multiple gmail's with ai template",
+        "height": 608,
+        "width": 1152
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -128,
+        800
+      ],
+      "typeVersion": 1,
+      "id": "1712e06b-5497-4a05-b1eb-623f6ef892f1",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "formTitle": "Project Requirement Submission Form",
+        "formDescription": "Please fill out this form with your project details. This will help us understand your requirements clearly and provide you with the best solution.",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Full Name",
+              "placeholder": "Enter your name",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Email Address",
+              "fieldType": "email",
+              "placeholder": "Enter your email address",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Company / Organization",
+              "placeholder": "Enter your company name or orginization name",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Project Title",
+              "placeholder": "Enter your project title",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Project Description",
+              "fieldType": "textarea",
+              "placeholder": "Enter your project discription",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Project Category",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Web Development"
+                  },
+                  {
+                    "option": "Mobile App"
+                  },
+                  {
+                    "option": "AI/ML"
+                  },
+                  {
+                    "option": "E-commerce"
+                  },
+                  {
+                    "option": "Automation"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Key Features Required",
+              "fieldType": "textarea",
+              "placeholder": "Enter key features you required",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Budget Range",
+              "fieldType": "number",
+              "placeholder": "Enter your budget",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Expected Timeline",
+              "fieldType": "date",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Attachments",
+              "fieldType": "file",
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.2,
+      "position": [
+        -80,
+        944
+      ],
+      "id": "95f37655-cbe7-441a-97dd-df522352f236",
+      "name": "On form submission",
+      "webhookId": "57c41138-2fb2-43f8-acde-91128db8f0e7"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1J0mnDuQGW71aigl54h5cO4QAzT4WoYtf2KdDtxwkAik",
+          "mode": "list",
+          "cachedResultName": "form submission's",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1J0mnDuQGW71aigl54h5cO4QAzT4WoYtf2KdDtxwkAik/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1J0mnDuQGW71aigl54h5cO4QAzT4WoYtf2KdDtxwkAik/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Full Name",
+              "displayName": "Full Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Email Address",
+              "displayName": "Email Address",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Company / Organization",
+              "displayName": "Company / Organization",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Project Title",
+              "displayName": "Project Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Project Description",
+              "displayName": "Project Description",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Project Category",
+              "displayName": "Project Category",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Key Features Required",
+              "displayName": "Key Features Required",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Budget Range",
+              "displayName": "Budget Range",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Expected Timeline",
+              "displayName": "Expected Timeline",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Attachments",
+              "displayName": "Attachments",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "submittedAt",
+              "displayName": "submittedAt",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "formMode",
+              "displayName": "formMode",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        112,
+        944
+      ],
+      "id": "e9e092e3-96f2-4922-8ba4-11253f012026",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Q2iO0xdqnmgcK6qu",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Append row in sheet').item.json['Email Address'] }}",
+        "subject": "Project Requirement Form",
+        "emailType": "text",
+        "message": "={{ $json.content.parts[0].text }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        816,
+        944
+      ],
+      "id": "5ba05538-6712-46b8-b3b6-98ff42c55a55",
+      "name": "Send a message1",
+      "webhookId": "196de275-1950-4416-addb-1c72d3813045",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "sakMJW7y1iNuTqRm",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemini-1.5-flash",
+          "mode": "list",
+          "cachedResultName": "models/gemini-1.5-flash"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "you are an special email writer",
+              "role": "model"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGeminiTool",
+      "typeVersion": 1,
+      "position": [
+        608,
+        1120
+      ],
+      "id": "1d121370-d581-48d9-ae12-6a655f609737",
+      "name": "Message a model in Google Gemini1",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "aJOeEbbojOzMZuKu",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemini-1.5-flash",
+          "mode": "list",
+          "cachedResultName": "models/gemini-1.5-flash"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "you are an helpful email sender",
+              "role": "model"
+            },
+            {
+              "content": "=your task is to customize an email using this data:\n\nFull Name: {{ $json['Full Name'] }}\nProject Title: {{ $json['Project Title'] }}\n\nemail template:\nHello Full Name,\n\nThank you for sharing your project requirements with us.  \nWe have successfully received the details of your project: Project Title.\n\nOur team will carefully review your description and get back to you shortly with next steps.  \n\nIf you have any additional information, please feel free to reply to this email.  \n\nBest regards\nRamla Eman"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1,
+      "position": [
+        528,
+        944
+      ],
+      "id": "0fb478cc-a542-4f92-912d-4bbaa892c7db",
+      "name": "Message a model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "aJOeEbbojOzMZuKu",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1J0mnDuQGW71aigl54h5cO4QAzT4WoYtf2KdDtxwkAik",
+          "mode": "list",
+          "cachedResultName": "form submission's",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1J0mnDuQGW71aigl54h5cO4QAzT4WoYtf2KdDtxwkAik/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1J0mnDuQGW71aigl54h5cO4QAzT4WoYtf2KdDtxwkAik/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        320,
+        944
+      ],
+      "id": "175202c1-2b34-4f28-8676-9f649f24e298",
+      "name": "Get row(s) in sheet1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Q2iO0xdqnmgcK6qu",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model in Google Gemini1": {
+      "ai_tool": [
+        [
+          {
+            "node": "Message a model",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model": {
+      "main": [
+        [
+          {
+            "node": "Send a message1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet1": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "001975b83b1ff8d0c6f851a39cb2a2d69c6e57ff2fd689699f1898c6412133c0"
+  }
+}

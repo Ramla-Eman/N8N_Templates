@@ -1,0 +1,175 @@
+{
+  "name": "email_sender",
+  "nodes": [
+    {
+      "parameters": {
+        "sendTo": "={{ $json.Email }}",
+        "subject": "=Hi I'm just testing {{ $json.Name }}",
+        "emailType": "text",
+        "message": "=Hello, this is a test email for all member {{ $json.Name }}.",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        384,
+        80
+      ],
+      "id": "f48abcac-4475-40e8-a377-49b9631ee781",
+      "name": "Send a message",
+      "webhookId": "68183b36-d54a-4d83-9d02-4b8fdab39a4c",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "sakMJW7y1iNuTqRm",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1-h98WoSPdxKxNTYe6ofYy-ECLESAzWJJFW5PG3M-X-Y/edit?gid=1221315478#gid=1221315478",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "=1221315478",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        64,
+        80
+      ],
+      "id": "2febe5b0-51d0-4ddb-9998-f243b22d5824",
+      "name": "Get row(s) in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Q2iO0xdqnmgcK6qu",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# Email sender\n\n## This is an email sender to multiple gmail's\n",
+        "height": 496,
+        "width": 976,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -368,
+        -192
+      ],
+      "typeVersion": 1,
+      "id": "ba72b11a-8297-4c61-921c-05f200823886",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -240,
+        80
+      ],
+      "id": "fa7d81c5-01a6-42b6-b33b-3ae4ae41bf15",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "content": "## Add your document URL",
+        "height": 256,
+        "width": 304
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -32,
+        16
+      ],
+      "typeVersion": 1,
+      "id": "e7624596-8abd-4c6a-b0ed-427cf8bcdd9b",
+      "name": "Sticky Note13"
+    }
+  ],
+  "pinData": {
+    "Get row(s) in sheet": [
+      {
+        "json": {
+          "row_number": 2,
+          "Name": "Ramla Eman",
+          "Email": "ramla.eman.ra@gmail.com"
+        }
+      },
+      {
+        "json": {
+          "row_number": 3,
+          "Name": "Rizwan Ahmed",
+          "Email": "razykan.ra@gmail.com"
+        }
+      },
+      {
+        "json": {
+          "row_number": 4,
+          "Name": "Abdull basit",
+          "Email": "kabdullbasit856@gmail.com"
+        }
+      },
+      {
+        "json": {
+          "row_number": 5,
+          "Name": "Farhat Bibi",
+          "Email": "farwan1987@gmail.com"
+        }
+      },
+      {
+        "json": {
+          "row_number": 6,
+          "Name": "Ramla Work",
+          "Email": "piecute588@gmail.com"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Get row(s) in sheet": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "ab67b190-feaa-4001-beb6-86d24236ce72",
+  "meta": {
+    "instanceId": "001975b83b1ff8d0c6f851a39cb2a2d69c6e57ff2fd689699f1898c6412133c0"
+  },
+  "id": "khdUx2sf4gP4I7Ya",
+  "tags": []
+}

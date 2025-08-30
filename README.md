@@ -18,3 +18,4 @@
 16. **[Github MCP server](https://github.com/Ramla-Eman/N8N_Templates/blob/main/github_mcp_server)**
 17. **[Automate GitHub Issue Assignments](https://github.com/Ramla-Eman/N8N_Templates/blob/main/automate_gitHub_issue_assignments)**
 18. **[Discord Channel Creation](https://github.com/Ramla-Eman/N8N_Templates/blob/main/discord_channel_creation)**
+19. **[Inventory Manager](https://github.com/Ramla-Eman/N8N_Templates/blob/main/inventory_manager)**

@@ -11,3 +11,7 @@
 9. **[Voice based Appointement Booking App](https://github.com/Ramla-Eman/N8N_Templates/blob/main/voice_based_appointment_booking_system)**
 10. **[Wahtsapp Chatbot](https://github.com/Ramla-Eman/N8N_Templates/blob/main/whatsApp_chatbot)**
 11. **[Chat with Google Sheet](https://github.com/Ramla-Eman/N8N_Templates/blob/main/chat_with_google_sheet)**
+12. **[Notion to GitHub with email notifications](https://github.com/Ramla-Eman/N8N_Templates/blob/main/notion_to_gitHub_with_email_notifications)**
+13. **[Jira Epics with AI and Google Docs](https://github.com/Ramla-Eman/N8N_Templates/blob/main/jira_epics_with_ai_and_google_docs)**
+14. **[Approval & Data Submission System](https://github.com/Ramla-Eman/N8N_Templates/blob/main/approval_%26_data_submission_system)**
+15. **[Manage Construction Projects](https://github.com/Ramla-Eman/N8N_Templates/edit/main/manage_construction_projects)**

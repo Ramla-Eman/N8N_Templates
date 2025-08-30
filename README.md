@@ -14,4 +14,7 @@
 12. **[Notion to GitHub with email notifications](https://github.com/Ramla-Eman/N8N_Templates/blob/main/notion_to_gitHub_with_email_notifications)**
 13. **[Jira Epics with AI and Google Docs](https://github.com/Ramla-Eman/N8N_Templates/blob/main/jira_epics_with_ai_and_google_docs)**
 14. **[Approval & Data Submission System](https://github.com/Ramla-Eman/N8N_Templates/blob/main/approval_%26_data_submission_system)**
-15. **[Manage Construction Projects](https://github.com/Ramla-Eman/N8N_Templates/edit/main/manage_construction_projects)**
+15. **[Manage Construction Projects](https://github.com/Ramla-Eman/N8N_Templates/blob/main/manage_construction_projects)**
+16. **[Github MCP server](https://github.com/Ramla-Eman/N8N_Templates/blob/main/github_mcp_server)**
+17. **[Automate GitHub Issue Assignments](https://github.com/Ramla-Eman/N8N_Templates/blob/main/automate_gitHub_issue_assignments)**
+18. **[Discord Channel Creation](https://github.com/Ramla-Eman/N8N_Templates/blob/main/discord_channel_creation)**
